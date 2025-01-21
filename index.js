@@ -1,5 +1,10 @@
+//import dotenv
+require('dotenv').config();
+
 const app = require("./app");
-const port = 3000;
+const port = process.env.PORT;
+
+
 
 // const app = express();
 // const fruit = require("./fruits.json");
