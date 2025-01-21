@@ -1,11 +1,14 @@
 const express = require("express");
+const cors = require("cors");
 const app = express();
 
 const logger = require("./logger");
 
 //middleware sits between incoming request and final response, performs logging as well
+app.use(cors());
 app.use(express.json());
 app.use(logger);
+
 
 const fruitsRouter = require("./routes/fruits")
 
